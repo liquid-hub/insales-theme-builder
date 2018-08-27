@@ -1,0 +1,52 @@
+{
+  "components": {
+    "root": "./project/components/",
+    "styles": ["./project/components/*/*.*css", "./project/components/*/scss/*.*css", "!./project/components/*/ui.*css"],
+    "ui": ["./project/components/*/ui.*css", "./project/components/*/ui/*.*css"],
+    "scripts": "./project/components/*/*.js",
+    "guide": "./project/components/*/guide.html",
+    "liquid": "./project/components/*/*.liquid"
+  },
+  "templates": {
+    "liquid": "./project/templates/*.liquid"
+  },
+  "plugins": {
+    "styles": ["./project/plugins/*/*/*.*css", "./project/components/*/plugins/*/*.*css", "!./project/components/*/plugins/*/*.md"],
+    "scripts": ["./project/plugins/*/*/*.js", "./project/components/*/plugins/*/*.js", "!./project/components/*/plugins/*/*.md"],
+    "media": ["!./project/plugins/*/*/*.js", "!./project/components/*/plugins/*/*.js","!./project/plugins/*/*.*css", "!./project/components/*/plugins/*/*.*css", "./project/components/*/plugins/*/*.*", "./project/plugins/*/*/*.*", "!./project/components/*/plugins/*/*.md"]
+  },
+  "config": {
+    "configs": ["./project/config/*.*", "!./project/config/setup.json"]
+  },
+  "setup": {
+    "setup": ["./project/config/setup.json", "./project/components/*/setup.json", "./project/components/*/setup/*.json"]
+  },
+  "media": {
+    "paths": ["./project/media/*/*.*", "./project/components/*/media/**.*"]
+  },
+  "uploader": "./theme/",
+  "theme": {
+    "media": "./theme/media",
+    "config": "./theme/config",
+    "snippets": "./theme/snippets/",
+    "templates": "./theme/templates/"
+  },
+  "clear": {
+    "path": "./theme/*/*"
+  },
+  "fonts": {
+    "path": ["./project/fonts/**/*.*", "!./project/fonts/*/*.*css"],
+    "style": "./project/fonts/**/*.*css"
+  },
+  "bundles": {
+    "css": "./project/bundles/css",
+    "js": "./project/bundles/js"
+  },
+  "scss": {
+    "function": "./project/scss_import/function",
+    "mixins": "./project/scss_import/mixins",
+    "variables_default": "./project/scss_import/variables_default",
+    "variables": "./project/scss_import/variables",
+    "all": ["./project/scss_import/function/", "./project/scss_import/mixins/", "./project/scss_import/variables_default/", "./project/scss_import/variables/"]
+  }
+}

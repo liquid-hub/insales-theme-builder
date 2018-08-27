@@ -1,0 +1,12 @@
+{
+  "breadcrumb": "insales-components/breadcrumb",
+  "pagination": "insales-components/pagination",
+  "quantity": "insales-components/quantity",
+  "settings_data": "insales-components/settings_data",
+  "dataTabs": "insales-components/dataTabs",
+  "menu": "insales-components/menu",
+  "cellsio": "insales-components/cellsio",
+  "InSalesFeedback": "insales-components/InSalesFeedback",
+  "layouts": "insales-components/layouts.layout",
+  "messages": "insales-components/messages"
+}

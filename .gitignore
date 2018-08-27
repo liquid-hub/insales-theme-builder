@@ -1,0 +1,6 @@
+.DS_Store
+/itb-config.js
+/node_modules
+/theme
+/project
+/package-lock.json
