@@ -59,19 +59,19 @@
 
  | Имя директории | Назначение                                    |
  |----------------|-----------------------------------------------|
- | scss_import/variables    | Переменные для scss                           |
- | components     | Компоненеты которые будут включаться в шаблон |
- | components/*/*.scss | Стили которые собираются в theme.scss                                |
- | components/*/ui.scss | Стили которые собираются в ui.scss                                |
- | components/*/plugins/*/* | Js/css плагины                                |
- | components/*/media | медиа для компонентов                                |
- | components/*/setup.json | setup.json для компонента                                |
- | templates      | Шаблоны                                       |
- | fonts          | Шрифты                                        |
- | media          | Медиа файлы для шаблона                       |
- | config         | Конфиги для темы                              |
- | theme          | Директория темы                               |
- | bundles        | Бандлы (css/js), содержимое директорий конкатенируется                              |
+ | `components`     | Компоненеты которые будут включаться в шаблон |
+ | `components/*/*.scss` | Стили которые собираются в theme.scss                                |
+ | `components/*/ui.scss` | Стили которые собираются в ui.scss                                |
+ | `components/*/plugins/*/*` | Js/css плагины                                |
+ | `components/*/media` | медиа для компонентов                                |
+ | `components/*/setup.json` | setup.json для компонента                                |
+ | `scss_import/variables`    | Переменные для scss                           |
+ | `templates`      | Шаблоны                                       |
+ | `fonts`         | Шрифты                                        |
+ | `media`          | Медиа файлы для шаблона                       |
+ | `config`         | Конфиги для темы                              |
+ | `theme`          | Директория темы                               |
+ | `bundles`        | Бандлы (css/js), содержимое директорий конкатенируется                              |
 
  ## Шрифты
 
