@@ -20,8 +20,8 @@ const processTheme = (inputStream) => {
 
   return scssStream(inputStream
     .pipe(sort()))
-    .pipe(concat('theme.scss'));
-    .pipe(gap.prependText(variablesInclude))
+    .pipe(concat('theme.scss'))
+    .pipe(gap.prependText(variablesInclude));
 };
 
 const processUI = (inputStream) => {
@@ -29,8 +29,8 @@ const processUI = (inputStream) => {
 
   return scssStream(inputStream
     .pipe(sort()))
-    .pipe(concat('ui.scss'));
-    .pipe(gap.prependText(variablesInclude))
+    .pipe(concat('ui.scss'))
+    .pipe(gap.prependText(variablesInclude));
 };
 
 watchSrc('theme:watch:styles', paths.components.styles, paths.theme.media, processTheme);
