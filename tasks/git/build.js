@@ -90,6 +90,18 @@ function destComponents () {
             case 'media':
               componentDest = thempath + '/media/' + component.key;
               break;
+            case 'scss_function':
+              componentDest = thempath + '/scss_import/function/';
+              break;
+            case 'scss_mixins':
+              componentDest = thempath + '/scss_import/mixins/';
+              break;
+            case 'scss_variables':
+              componentDest = thempath + '/scss_import/variables/';
+              break;
+            case 'scss_variables_default':
+              componentDest = thempath + '/scss_import/variables_default/';
+              break;
             case 'templates':
               componentDest = thempath + '/templates/';
               break;
@@ -128,6 +140,26 @@ function destComponents () {
                     .on('end', cb);
                   break;
                 case 'bundle-css':
+                  gulp.src(component.path + '/*.*css')
+                    .pipe(gulp.dest(componentDest))
+                    .on('end', cb);
+                  break;
+                case 'scss_function':
+                  gulp.src(component.path + '/*.*css')
+                    .pipe(gulp.dest(componentDest))
+                    .on('end', cb);
+                  break;
+                case 'scss_mixins':
+                  gulp.src(component.path + '/*.*css')
+                    .pipe(gulp.dest(componentDest))
+                    .on('end', cb);
+                  break;
+                case 'scss_variables':
+                  gulp.src(component.path + '/*.*css')
+                    .pipe(gulp.dest(componentDest))
+                    .on('end', cb);
+                  break;
+                case 'scss_variables_default':
                   gulp.src(component.path + '/*.*css')
                     .pipe(gulp.dest(componentDest))
                     .on('end', cb);
