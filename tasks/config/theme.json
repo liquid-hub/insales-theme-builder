@@ -8,5 +8,13 @@
   "cellsio": "insales-components/cellsio",
   "InSalesFeedback": "insales-components/InSalesFeedback",
   "layouts": "insales-components/layouts.layout",
-  "messages": "insales-components/messages"
+  "messages": "insales-components/messages",
+  "cart_item": "insales-components/cart_item",
+  "products_slider": "insales-components/products_slider",
+  "card": "insales-components/card",
+  "social": "insales-components/social",
+  "logo": "insales-components/logo",
+  "article_preview": "insales-components/article_preview",
+  "ui-forms": "insales-components/ui-forms",
+  "ui-buttons": "insales-components/ui-buttons"
 }
