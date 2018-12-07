@@ -6,6 +6,7 @@ const paths = updatePaths(require('../config/paths.json'));
 const fs = require('fs');
 const notifier = require('node-notifier');
 const commandLine = require('command-line-commands');
+const mkdirp = require('mkdirp');
 const validCommands = ['create'];
 
 // настройки нотификации
@@ -52,7 +53,7 @@ gulp.task('create', function () {
     createComponent(componentsJs);
     createComponent(componentsSetup);
     createComponent(componentReadme);
-    createComponent(componentsPlugins);
+    createDir(componentsPlugins)
   });
 });
 
@@ -64,4 +65,12 @@ function createComponent (filePath, fileContent = '') {
       log('Создан файл: ' + filePath);
     }
   });
+}
+
+function createDir (dirPath) {
+  try {
+    mkdirp.sync(dirPath);
+  } catch (e) {
+    console.log(e);
+  }
 }
