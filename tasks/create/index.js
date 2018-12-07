@@ -42,7 +42,7 @@ gulp.task('create', function () {
 
     let componentsStyle = componentsFolder + componentName + '.scss';
     let componentsSetup = componentsFolder + 'setup.json';
-    let componentsPlugins = componentsFolder + 'plugins/readme.md';
+    let componentsPlugins = componentsFolder + 'plugins/';
     let componentsLiquid = componentsFolder + componentName + '.liquid';
     let componentsJs = componentsFolder + componentName + '.js';
     let componentReadme = componentsFolder + 'readme.md';
@@ -56,8 +56,8 @@ gulp.task('create', function () {
   });
 });
 
-function createComponent (filePath) {
-  writeFile(filePath, '', function (err) {
+function createComponent (filePath, fileContent = '') {
+  writeFile(filePath, fileContent, function (err) {
     if (err) {
       console.log('Ошибка при генерации файла: ' + filePath);
     } else {
