@@ -9,5 +9,7 @@ module.exports = {
     // id: '854716',
     assetsSync: false,
     assetsDomain: 'https://assets.insales.ru'
-  }
+  },
+  mixedComponents: {},
+  customTheme: {}
 };

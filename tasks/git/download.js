@@ -12,7 +12,10 @@ let tmp = upath.normalize(PWD + '/project/tmp/');
 
 gulp.task('git:download', () => {
   let config = getConfig();
-  let components = deepMerge(theme, config.components);
+  let components = deepMerge(theme, config.mixedComponents);
+  if (typeof config.customTheme == 'object' && Object.keys(config.customTheme).length) {
+    components = config.customTheme;
+  }
   return getComponents(components);
 });
 
