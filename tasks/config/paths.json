@@ -8,7 +8,7 @@
     "liquid": "./project/components/*/*.liquid"
   },
   "templates": {
-    "liquid": "./project/templates/*.liquid"
+    "liquid": ["./project/templates/*.liquid", "./project/templates/*/*.liquid"]
   },
   "plugins": {
     "styles": ["./project/plugins/*/*/*.*css", "./project/components/*/plugins/*/*.*css", "!./project/components/*/plugins/*/*.md"],
