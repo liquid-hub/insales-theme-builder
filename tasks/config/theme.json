@@ -1,7 +1,7 @@
 {
   "settings_data": "insales-components/settings_data",
   "messages": "insales-components/messages",
-  "variables_default": "insales-components/variables_default",
+  "scss_variables_default": "insales-components/scss_variables_default",
   "variables": "insales-components/variables",
   "mixins": "insales-components/mixins",
   "function": "insales-components/function",
