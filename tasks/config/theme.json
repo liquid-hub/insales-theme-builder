@@ -1,4 +1,10 @@
 {
+  "settings_data": "insales-components/settings_data",
+  "messages": "insales-components/messages",
+  "variables_default": "insales-components/variables_default",
+  "variables": "insales-components/variables",
+  "mixins": "insales-components/mixins",
+  "function": "insales-components/function",
   "layouts": "insales-components/layouts.layout",
   "article": "insales-components/article",
   "blog": "insales-components/blog",
@@ -9,5 +15,5 @@
   "page": "insales-components/page",
   "page_404": "insales-components/page_404",
   "product": "insales-components/product",
-  "search": "insales-components/messages"
+  "search": "insales-components/search"
 }
