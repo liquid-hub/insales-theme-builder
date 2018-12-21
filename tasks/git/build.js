@@ -124,7 +124,7 @@ function destComponents () {
             .then(() => {
               switch (component.type) {
                 case 'snippets':
-                  gulp.src(component.path + '/*')
+                  gulp.src([component.path + '/*', component.path + '/*/*'])
                     .pipe(gulp.dest(componentDest))
                     .on('end', cb);
                   break;
