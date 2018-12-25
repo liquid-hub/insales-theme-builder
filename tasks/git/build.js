@@ -105,6 +105,9 @@ function destComponents () {
             case 'templates':
               componentDest = thempath + '/templates/';
               break;
+            case 'fonts':
+              componentDest = thempath + '/fonts/' + component.key;
+              break;
             case 'config':
               componentDest = thempath + '/config/';
               break;
@@ -166,6 +169,12 @@ function destComponents () {
                   break;
                 case 'bundle-js':
                   gulp.src(component.path + '/*.js')
+                    .pipe(gulp.dest(componentDest))
+                    .on('end', cb);
+                  break;
+                case 'fonts':
+                  let fonts = [component.path + '/*.*css', component.path + '/*.woff', component.path + '/*.woff2', component.path + '/*.eot', component.path + '/*.ttf', component.path + '/*.svg', component.path + '/*.otf']
+                  gulp.src(fonts)
                     .pipe(gulp.dest(componentDest))
                     .on('end', cb);
                   break;
