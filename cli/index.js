@@ -104,7 +104,7 @@ const initProgram = (config) => {
 
   program
     .command('setup')
-    .alias('s')
+    .alias('st')
     // .option('-a, --a', 'Адаптивная версия', () => {
     //   return gulp.insalesConfig.adaptive = true;
     // })
