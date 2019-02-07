@@ -9,15 +9,13 @@ module.exports = (callback = () => {}, onlyRequire = false) => {
     config = require(dest);
     callback(config);
   } catch (e) {
-    if (!onlyRequire) {
-      let path = __dirname + '../..' + '/config/itb-config.js';
-      cpFile(upath.join(path), dest).then(() => {
-        console.log('Создан файл конфигурации itb-config.js');
-      })
-        .catch(() => {
-          console.log('Не удалось создать файл настроек!');
-        });
-    }
+    let path = __dirname + '../..' + '/config/itb-config.js';
+    cpFile(upath.normalize(path), dest).then(() => {
+      console.log('Создан файл конфигурации itb-config.js');
+    })
+      .catch(() => {
+        console.log('Не удалось создать файл настроек!');
+      });
   }
   return config;
 };
