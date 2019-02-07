@@ -104,10 +104,7 @@ const initProgram = (config) => {
 
   program
     .command('setup')
-    .alias('st')
-    // .option('-a, --a', 'Адаптивная версия', () => {
-    //   return gulp.insalesConfig.adaptive = true;
-    // })
+    .alias('u')
     .description('Установить базовый проект')
     .action(function (env, options) {
       gulp.task('components', gulp.series(['git:download', 'git:build']));
