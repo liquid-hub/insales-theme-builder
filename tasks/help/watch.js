@@ -24,6 +24,8 @@ module.exports = (nameTask, source, dest, plugins) => {
               notifier.notify({
                 message: err.message
               });
+            }else{
+              console.log(err);
             }
           }
         })))
