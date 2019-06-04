@@ -3,6 +3,7 @@ const watch = require('gulp-watch');
 const plumber = require('gulp-plumber');
 const notifier = require('node-notifier');
 const flatten = require('gulp-flatten');
+const fixPath = require('./fixPath.js');
 const delFile = require('./delFile.js');
 const watchOptions = require('../config/watchOptions.js');
 
@@ -17,7 +18,7 @@ module.exports = (nameTask, source, dest, plugins) => {
   let pipeline = (typeof plugins === 'function') ? plugins : (stream) => { return stream; };
   return gulp.task(nameTask, () => {
     return new Promise(function (resolve, reject) {
-      pipeline(watch(source, watchOptions, delFile)
+      pipeline(watch(fixPath(source), watchOptions, delFile)
         .pipe(plumber({
           errorHandler: function (err) {
             if (err.message) {

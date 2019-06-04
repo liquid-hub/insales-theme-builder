@@ -6,6 +6,7 @@ const filter = require('gulp-filter');
 const sort = require('gulp-sort');
 const concat = require('gulp-concat');
 const gap = require('gulp-append-prepend');
+const fixPath = require('./fixPath.js');
 const testEmpty = require('./testEmpty.js');
 
 /**
@@ -15,8 +16,9 @@ return stream
 .pipe(concat());
 })
 */
-module.exports = (nameTask, source, dest, concatName, textInclude, plugins) => {
+module.exports = (nameTask, sourcePath, dest, concatName, textInclude, plugins) => {
   let pipeline = (typeof plugins === 'function') ? plugins : (stream) => { return stream; };
+  let source = fixPath(sourcePath);
   return gulp.task(nameTask, () => {
     return new Promise(function (resolve, reject) {
       watch(source, () => {

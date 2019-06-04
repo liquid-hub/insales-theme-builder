@@ -3,6 +3,7 @@ const flatten = require('gulp-flatten');
 const watch = require('gulp-watch');
 const plumber = require('gulp-plumber');
 const notifier = require('node-notifier');
+const fixPath = require('./fixPath.js');
 
 /**
 * Функция помощник для создания задач
@@ -11,8 +12,9 @@ return stream
 .pipe(concat());
 })
 */
-module.exports = (nameTask, source, dest, plugins) => {
+module.exports = (nameTask, sourcePath, dest, plugins) => {
   let pipeline = (typeof plugins === 'function') ? plugins : (stream) => { return stream; };
+  let source = fixPath(sourcePath);
   return gulp.task(nameTask, () => {
     return new Promise(function (resolve, reject) {
       watch(source, () => {
