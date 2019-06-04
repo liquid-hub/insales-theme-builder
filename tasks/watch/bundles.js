@@ -13,13 +13,13 @@ const paths = updatePaths(require('../config/paths.json'));
 gulp.task('theme:watch:bundles:css', function (cb) {
   let css = [upath.normalize( paths.bundles.css + '/*/*.*css' ), upath.normalize( paths.bundles.css + '/*/*/*.*css' )];
 
-  var bundlesPath = upath.sep + 'bundles' + upath.sep + 'css' + upath.sep;
+  var bundlesPath = upath.normalize(upath.sep + 'bundles' + upath.sep + 'css' + upath.sep);
   watch(css, function (vinyl) {
-    var dirname = paths.bundles.css + '/' +vinyl.dirname.split(bundlesPath).reverse()[0].split(upath.sep)[0];
+    var dirname = paths.bundles.css + '/' + upath.normalize(vinyl.dirname).split(bundlesPath).reverse()[0].split(upath.sep)[0];
 
     let variablesInclude = getVariables();
     var bundlePath = [upath.normalize(dirname + '/*/*.*css'), upath.normalize(dirname + '/*.*css')];
-    var bundleName = dirname.split(upath.sep).reverse()[0] + '.scss';
+    var bundleName = upath.normalize(dirname.split(upath.sep).reverse()[0] + '.scss');
     scssStream(gulp.src(bundlePath))
       .pipe(sort())
       .pipe(concat(bundleName))
